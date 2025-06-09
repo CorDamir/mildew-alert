@@ -1,7 +1,7 @@
 ## Dataset Content
 
-- The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves). We then created a fictitious user story where predictive analytics can be applied in a real project in the workplace.
-- The dataset contains +4 thousand images taken from the client's crop fields. The images show healthy cherry leaves and cherry leaves that have powdery mildew, a fungal disease that affects many plant species. The cherry plantation crop is one of the finest products in their portfolio, and the company is concerned about supplying the market with a compromised quality product.
+- The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
+- The dataset contains 4208 images; 2104 of healthy cherry leaves and 2104 of cherry leaves with powdery mildew, taken from the client's crop fields. Powdery mildew is a fungal disease that affects many plant species.
 
 ## Business Requirements
 
@@ -14,11 +14,18 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypothesis and how to validate?
 
-- List here your project hypothesis(es) and how you envision validating it (them).
+- Cherry leaves with powdery mildew have visual signs
+    - average image of healthy leaf differs from average image of a leaf with powdery mildew
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
-- List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
+- Business requirement 1: Data visualization
+    - As a client I want to see mean and standard deviaton images for both healthy and infected cherry leaves, so that I can confirm visual difference
+    - As a client I want to see the difference between average image of a healthy leaf and an average image of infected cherry leaf, so that I can confirm visual difference
+    - As a client I want to see an image montage of dataset images for both healthy and infected leaves, so that I can confirm correct data input
+
+- Business requirement 2: Data classification
+    - As a client I want to have a machine learning model that distinguishes healthy from infected leaves quickly on multiple leaf image input, so that I can speed up diagnosing and treatment procedure
 
 ## ML Business Case
 
@@ -26,8 +33,51 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Dashboard Design
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+### Page 1: Quick project summary
+
+  - Status element 1
+    - General Information
+    - Project dataset information
+
+  - Status element 2
+    - Business requirements
+
+  - Status element 3
+    - Link to more information
+
+### Page 2: Cherry leaf visualizer
+
+  - Expander 1 
+    - Average and variability images
+
+  - Expander 2 
+    - Differences between healthy and infected average images
+
+  - Expander 3 
+    - Image montage
+
+### Page 3: Powdery mildew classifier
+
+  - Status element
+    - Usage description
+
+  - File uploader
+    - Allow multiple image upload
+
+  - Button 1
+    - Run ML classifier model on uploaded images and display results
+    - Display table showing uploaded images and ML model classifications
+
+  - Button 2
+    - Generate table with image names and ML model classifications with option to download
+
+### Page 4: Project Hypothesis and Validation
+
+- TODO: self-explanatory by page name
+
+### Page 5: ML Performance Metrics
+
+- TODO: descriptive performance metrics
 
 ## Unfixed Bugs
 
