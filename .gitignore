@@ -1,3 +1,5 @@
 .venv/
 kaggle.json
 inputs/dataset/cherry-leaves/
+backup/
+outputs/dataset
