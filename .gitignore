@@ -4,3 +4,4 @@ inputs/dataset/cherry-leaves/
 backup/
 outputs/
 **/__pycache__/
+*.pyc
