@@ -24,8 +24,6 @@ class MultiPage:
         self.pages.append({"title": title, "function": func})
 
     def run(self):
-        st.title(self.app_name)
-        st.divider()
         st.sidebar.title("Menu")
         page = st.sidebar.radio(
             "menu",

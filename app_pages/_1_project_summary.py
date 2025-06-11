@@ -2,6 +2,8 @@ import streamlit as st
 
 
 def project_summary_page():
+    st.title("Project: Mildew Alert!")
+    st.divider()
     st.write("## Project summary")
     st.subheader("Context information", divider=True)
 
