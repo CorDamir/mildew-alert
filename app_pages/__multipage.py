@@ -1,6 +1,6 @@
 # Code in this file is NOT my work
 # This entire file was copied from Code Institute's lesson project
-# on the following link:
+# with only minor change - please find original on the following link:
 # https://github.com/Code-Institute-Solutions/WalkthroughProject01/blob/main/app_pages/multipage.py
 
 import streamlit as st
@@ -25,7 +25,12 @@ class MultiPage:
 
     def run(self):
         st.title(self.app_name)
+        st.divider()
+        st.sidebar.title("Menu")
         page = st.sidebar.radio(
-            'Menu', self.pages, format_func=lambda page: page['title']
+            "menu",
+            self.pages,
+            format_func=lambda page: page['title'],
+            label_visibility="collapsed"
             )
         page['function']()
