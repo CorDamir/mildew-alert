@@ -1,11 +1,17 @@
 import streamlit as st
 from src.image_montage_functionality import display_montage
+from PIL import Image
 
 
 def data_study_page():
     # Set radio key on page load to avoid errors
     if "montage_radio" not in st.session_state:
         st.session_state["montage_radio"] = None
+
+    # Set image loading into session state to avoid
+    # rendering them before radio buttons
+    if "loaded_images" not in st.session_state:
+        st.session_state["loaded_images"] = []
 
     # Set appropriate header-like style for expander elements
     st.markdown(
@@ -126,3 +132,18 @@ def data_study_page():
             key="montage_radio",
             on_change=display_montage(st.session_state["montage_radio"])
         )
+
+        # loaded images are in session_state from st.radio's "on_change" call
+        loaded_images = st.session_state["loaded_images"]
+
+        if loaded_images:
+            for row in range(5):
+                cols = st.columns(2)
+
+                for col in range(2):
+                    index = row * 2 + col
+                    with cols[col]:
+                        st.image(
+                            loaded_images[index],
+                            use_container_width=True
+                            )
