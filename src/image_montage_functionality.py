@@ -16,22 +16,34 @@ def set_images_for_montage(montage_type):
     or 5v5 combination depending on passed string
     and stores them as a list in session_state["loaded_images"]
     """
-    if montage_type == "Healthy":
-        all_images = [
-            HEALTHY_DIR + "/" + img_path
-            for img_path in os.listdir(HEALTHY_DIR)
-        ]
+    if montage_type == "Comparison":
+        healthy_images = random.sample(
+            [
+                HEALTHY_DIR + "/" + img_path
+                for img_path in os.listdir(HEALTHY_DIR)
+            ], 5)
 
-        st.session_state["loaded_images"] = [
-            Image.open(img)
-            for img in random.sample(all_images, 10)
-            ]
+        mildew_images = random.sample(
+            [
+                MILDEW_DIR + "/" + img_path
+                for img_path in os.listdir(MILDEW_DIR)
+            ], 5)
 
-    elif montage_type == "Mildewed":
-        st.write(MILDEW_DIR)
+        all_images = []
+        for alter, nate in zip(healthy_images, mildew_images):
+            all_images.append(alter)
+            all_images.append(nate)
 
     else:
-        st.write("combine")
+        chosen_dir = HEALTHY_DIR if montage_type == "Healthy" else MILDEW_DIR
+
+        all_images = random.sample(
+            [
+                chosen_dir + "/" + img_path
+                for img_path in os.listdir(chosen_dir)
+            ], 10)
+
+    st.session_state["loaded_images"] = [Image.open(img) for img in all_images]
 
 
 def display_montage(loaded_images):

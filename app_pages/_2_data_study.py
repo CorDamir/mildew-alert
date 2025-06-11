@@ -93,7 +93,7 @@ def data_study_page():
 
     with st.expander("Averages difference"):
         st.write(
-            "Inspect difference image between averages of healthy"
+            "Inspecting difference image between averages of healthy"
             " and mildewed leaves"
         )
         st.image(images_dir + "/difference_image.png")
@@ -118,24 +118,38 @@ def data_study_page():
 
     with st.expander("Manual inspection"):
         st.info(
-            "With manual inspection of leaves we can clearly distinguish"
-            " which are infected. Combined with knowledge that average"
-            " images moderately differ we can be optimistic that machine"
-            " learning model will also be succesfull."
+            "With manual inspection of individual leaves we can clearly"
+            " distinguish which are infected. Combined with knowledge that"
+            " average images moderately differ we can be optimistic that"
+            " machine learning model will also be successfull."
         )
 
         st.subheader("Image montages", divider=True)
-
-        st.radio(
-            "Select montage type",
-            label_visibility="collapsed",
-            options=["Healthy", "Mildewed", "Comparison"],
-            key="montage_radio",
-            on_change=set_images_for_montage(st.session_state["montage_radio"])
+        st.write(
+            "Choose an option to display image montage. Comparison will"
+            " display healthy leaves on the left and mildewed on the right"
         )
 
-        # loaded images are in session_state from st.radio's "on_change" call
-        loaded_images = st.session_state["loaded_images"]
+        column_display = st.columns([1, 3, 1])
 
-        if loaded_images:
-            display_montage(loaded_images)
+        with column_display[1]:
+            radio = st.radio(
+                "Select montage type",
+                label_visibility="collapsed",
+                options=["Healthy", "Mildewed", "Comparison"],
+                key="montage_radio",
+                on_change=set_images_for_montage(
+                    st.session_state["montage_radio"]
+                    ),
+                horizontal=True
+            )
+
+        with column_display[2]:
+            if st.button("🔄"):
+                set_images_for_montage(st.session_state["montage_radio"])
+
+        # loaded images are in session_state from st.radio's "on_change" call
+        if radio:
+            loaded_images = st.session_state["loaded_images"]
+            if loaded_images:
+                display_montage(loaded_images)
