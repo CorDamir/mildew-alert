@@ -1,6 +1,7 @@
 import streamlit as st
-from src.image_montage_functionality import display_montage
-from PIL import Image
+from src.image_montage_functionality import (
+    set_images_for_montage, display_montage
+)
 
 
 def data_study_page():
@@ -130,20 +131,11 @@ def data_study_page():
             label_visibility="collapsed",
             options=["Healthy", "Mildewed", "Comparison"],
             key="montage_radio",
-            on_change=display_montage(st.session_state["montage_radio"])
+            on_change=set_images_for_montage(st.session_state["montage_radio"])
         )
 
         # loaded images are in session_state from st.radio's "on_change" call
         loaded_images = st.session_state["loaded_images"]
 
         if loaded_images:
-            for row in range(5):
-                cols = st.columns(2)
-
-                for col in range(2):
-                    index = row * 2 + col
-                    with cols[col]:
-                        st.image(
-                            loaded_images[index],
-                            use_container_width=True
-                            )
+            display_montage(loaded_images)

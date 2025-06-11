@@ -10,7 +10,7 @@ HEALTHY_DIR = DATASET_DIR + "/healthy"
 MILDEW_DIR = DATASET_DIR + "/powdery_mildew"
 
 
-def display_montage(montage_type):
+def set_images_for_montage(montage_type):
     """
     gets 10 random images from healthy/powdery_mildew dataset
     or 5v5 combination depending on passed string
@@ -32,3 +32,19 @@ def display_montage(montage_type):
 
     else:
         st.write("combine")
+
+
+def display_montage(loaded_images):
+    """
+    displays list of 10 passed images in 5 rows and 2 columns
+    """
+    for row in range(5):
+        cols = st.columns(2)
+
+        for col in range(2):
+            index = row * 2 + col
+            with cols[col]:
+                st.image(
+                    loaded_images[index],
+                    use_container_width=True
+                    )
