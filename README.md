@@ -22,7 +22,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 - Business requirement 1: Data visualization
     - As a client I want to see mean and standard deviaton images for both healthy and infected cherry leaves, so that I can confirm visual difference
     - As a client I want to see the difference between average image of a healthy leaf and an average image of infected cherry leaf, so that I can confirm visual difference
-    - As a client I want to see an image montage of dataset images for both healthy and infected leaves, so that I can confirm correct data input
+    - As a client I want to see an image montage of dataset images for both healthy and infected leaves, so that I can confirm visual difference
 
 - Business requirement 2: Data classification
     - As a client I want to have a machine learning model that distinguishes healthy from infected leaves quickly on multiple leaf image input, so that I can speed up diagnosing and treatment procedure

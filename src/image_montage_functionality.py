@@ -52,7 +52,6 @@ def display_montage(loaded_images):
     """
     for row in range(5):
         cols = st.columns(2)
-
         for col in range(2):
             index = row * 2 + col
             with cols[col]:
