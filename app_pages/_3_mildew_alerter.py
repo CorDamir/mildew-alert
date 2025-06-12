@@ -93,7 +93,7 @@ def mildew_alerter_page():
 
 
 def run_analysis(uploaded_imgs):
-    if sesh.model is None: 
+    if sesh.model is None:
         sesh.model = MildewAlerter("v1")
     sesh.uploaded_files = uploaded_imgs
     sesh.model.run_analysis(sesh.uploaded_files)

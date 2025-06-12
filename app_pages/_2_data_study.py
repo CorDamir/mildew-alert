@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit import session_state as sesh
 from src.image_montage_functionality import (
     set_images_for_montage, display_montage
 )
@@ -6,13 +7,13 @@ from src.image_montage_functionality import (
 
 def data_study_page():
     # Set radio key on page load to avoid errors
-    if "montage_radio" not in st.session_state:
-        st.session_state["montage_radio"] = None
+    if "montage_radio" not in sesh:
+        sesh.montage_radio = None
 
     # Set image loading into session state to avoid
     # rendering them before radio buttons
-    if "loaded_images" not in st.session_state:
-        st.session_state["loaded_images"] = []
+    if "loaded_images" not in sesh:
+        sesh.loaded_images = []
 
     # Set appropriate header-like style for expander elements
     st.markdown(
@@ -139,17 +140,15 @@ def data_study_page():
                 options=["Healthy", "Mildewed", "Comparison"],
                 key="montage_radio",
                 on_change=set_images_for_montage(
-                    st.session_state["montage_radio"]
+                    sesh.montage_radio
                     ),
                 horizontal=True
             )
 
         with column_display[2]:
             if st.button("🔄"):
-                set_images_for_montage(st.session_state["montage_radio"])
+                set_images_for_montage(sesh.montage_radio)
 
         # loaded images are in session_state from st.radio's "on_change" call
-        if radio:
-            loaded_images = st.session_state["loaded_images"]
-            if loaded_images:
-                display_montage(loaded_images)
+        if radio and sesh.loaded_images:
+            display_montage(sesh.loaded_images)
