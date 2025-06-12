@@ -2,6 +2,7 @@ from keras.models import load_model
 import os
 import numpy as np
 from keras.preprocessing import image
+import pandas as pd
 
 
 class MildewAlerter():
@@ -34,6 +35,15 @@ class MildewAlerter():
         self.results = []
         for img in images:
             self.results.append((img, self.prediction_to_text(img)))
+
+    def results_to_dataframe(self):
+        table_data = []
+
+        for img, text in self.results:
+            pred = "Healthy" if "healthy" in text else "Powdery mildew"
+            table_data.append({"Image name": img.name, "Prediction": pred})
+
+        return pd.DataFrame(table_data)
 
     @staticmethod
     def load_resize_image_as_array(img_path, width, height):
