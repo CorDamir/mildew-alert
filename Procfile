@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run mildwew_alert.py
+web: sh setup.sh && streamlit run mildew_alert.py
