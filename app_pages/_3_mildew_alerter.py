@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit import session_state as sesh
-from src.ML_model_functionality import MildewAlerter, run_analysis
+from src.ML_model_functionality import MildewAlerter
 import pandas as pd
 import io
 from datetime import datetime
@@ -48,8 +48,6 @@ def mildew_alerter_page():
         sesh.analysis_done = False
     if "table_ready" not in sesh:
         sesh.table_ready = False
-    if "analysis_results" not in sesh:
-        sesh.analysis_results = []
     if "dl_button_used" not in sesh:
         sesh.dl_button_used = False
 
@@ -61,7 +59,7 @@ def mildew_alerter_page():
             # if run analysis button pressed enable dl button
             # and flag analysis done
             if st.button("Run analysis!"):
-                sesh.analysis_results = run_analysis(sesh.model, uploaded_imgs)
+                sesh.model.run_analysis(uploaded_imgs)
                 sesh.analysis_done = True
                 sesh.table_ready = False
                 sesh.dl_button_used = False
@@ -73,13 +71,13 @@ def mildew_alerter_page():
 
         # if generate table button pressed flag: table is ready
         if generate_report_button:
-            sesh.table_data = generate_table_data(sesh.analysis_results)
+            sesh.table_data = generate_table_data(sesh.model.results)
             sesh.table_ready = True
             st.table(sesh.table_data)
 
         # analysis done and generate table not pressed
         elif sesh.analysis_done:
-            for img, text in sesh.analysis_results:
+            for img, text in sesh.model.results:
                 col_img, col_text = st.columns([1, 2])
                 with col_img:
                     st.divider()
