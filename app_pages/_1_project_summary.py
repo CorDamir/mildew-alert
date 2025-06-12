@@ -47,7 +47,7 @@ def project_summary_page():
         "* 1 - The client is interested in conducting a study to visually"
         " differentiate a healthy cherry leaf from one with powdery mildew\n"
         "* 2 - The client is interested in predicting if a cherry leaf is"
-        " healthy or contains powdery mildew"
+        " healthy or contains powdery mildew with accuracy of at least 97%"
     )
 
     st.subheader("Additional information", divider=True)

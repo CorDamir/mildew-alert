@@ -12,7 +12,7 @@ def hypothesis_page():
         )
 
     st.header("Validation")
-    st.success(
+    st.warning(
         "1. Visual study\n"
         "* average, variability and difference image inspection reveals"
         " subtle but significant differences between categories\n"
