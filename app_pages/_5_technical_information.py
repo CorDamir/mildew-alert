@@ -32,13 +32,16 @@ def technical_informatio_page():
             "Model design and layer specifications"
         )
         st.image(images_dir + "/model_summary.png", use_container_width=True)
+        st.write(
+            "describing here"
+        )
 
     with st.expander("Model fitting / training"):
         st.write(
             "Model was trained with planned maximum of 25 epochs and an early"
             " stop condition of four epochs with no improvement to loss"
             " function. It was optimized after only five epochs, triggering"
-            " early stop after ninth. Best model was then selected."
+            " early stop after ninth. Best configuration was then selected."
         )
 
         st.subheader("Performance tracking")
@@ -46,6 +49,13 @@ def technical_informatio_page():
         st.image(images_dir + "/accuracy_plot.png", use_container_width=True)
         st.image(images_dir + "/loss_function_plot.png",
                  use_container_width=True)
+
+        st.write(
+            "Machine learning process quickly identified key features and reached"
+            "optimal performance for it's design on 5th epoch. Afterwards more"
+            "iterations led to overfitting so having an early stop function was"
+            "critical"
+        )
 
     with st.expander("Model performance"):
         st.write(

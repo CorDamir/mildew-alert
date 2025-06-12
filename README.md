@@ -1,3 +1,7 @@
+# MILDEW ALERT!
+
+Mildew Alert! is a project that combines
+
 ## Dataset Content
 
 - The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/cherry-leaves).
@@ -12,32 +16,75 @@ To save time in this process, the IT team suggested an ML system that detects in
 - 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 - 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
-## Hypothesis and how to validate?
+## Hypothesis and validation strategy
 
-- Cherry leaves with powdery mildew have visual signs
-    - average image of healthy leaf differs from average image of a leaf with powdery mildew
+  ### Hypothesis
+  - Machine learning model could be implemented to replace labor-intensive and time-consuming process of powdery mildew detection on cherry plantations. This would significantly speed up detection potentially saving time as well as plantation yield due to early detection.
+
+  ### Validation strategy
+  - conduct a visual study to find differences between healthy and infected leaves with the goal of confirming posibility to distinguish them
+  - develop and evaluate a machine learning model with the goal of achieving at least 97% accuracy
+
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
 - Business requirement 1: Data visualization
-    - As a client I want to see mean and standard deviaton images for both healthy and infected cherry leaves, so that I can confirm visual difference
-    - As a client I want to see the difference between average image of a healthy leaf and an average image of infected cherry leaf, so that I can confirm visual difference
-    - As a client I want to see an image montage of dataset images for both healthy and infected leaves, so that I can confirm visual difference
+    - display and inspect "mean" and "standard deviation" images for both healthy and mildewed leaves
+    - display and inspect difference image between average healhy and average mildewed image
+    - display image montages and manually inspect for differences
 
 - Business requirement 2: Data classification
-    - As a client I want to have a machine learning model that distinguishes healthy from infected leaves quickly on multiple leaf image input, so that I can speed up diagnosing and treatment procedure
+    - develop a classification model that accurately distinguishes healthy from mildewed leaves with at least 97% accuracy
+    - generate a report with classifications quickly on multiple images
 
-## ML Business Case
+## ML Business Case Assesment
 
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+### 1. What are the business requirements?
+- The client is interested in conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+- The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
+
+### 2. Is there any business requirement that can be answered with conventional data analysis?
+- Yes, we can use conventional data analysis to conduct a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+
+### 3. Does the client need a dashboard or an API endpoint?
+- The client needs a dashboard.
+
+### 4. What does the client consider as a successful project outcome?
+- A study showing how to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+- Also, the capability to predict if a cherry leaf is healthy or contains powdery mildew.
+
+### 5. Can you break down the project into Epics and User Stories?
+- Information gathering and data collection.
+- Data visualization, cleaning, and preparation.
+- Model training, optimization and validation.
+- Dashboard planning, designing, and development.
+- Dashboard deployment and release.
+
+### 6. Ethical or Privacy concerns?
+- Client is imaginary and data publicly hosted, no concerns
+
+### 7. Does the data suggest a particular model?
+-The data suggests a binary classifier, indicating whether a particular cherry leaf is healthy or contains powdery mildew.
+
+### 8. What are the model's inputs and intended outputs?
+- The input is a cherry leaf image and the output is a prediction of whether the cherry leaf is healthy or contains powdery mildew.
+
+### 9. What are the criteria for the performance goal of the predictions?
+- We agreed with the client a degree of 97% accuracy.
+
+### 10. How will the client benefit?
+- The client will save work time
+- The client will detect infection quicker ultimately leading to higher plantation yields
 
 ## Dashboard Design
 
-### Page 1: Quick project summary
+### Page 1: Project summary
 
   - Status element 1
     - General Information
-    - Project dataset information
+
+  - Status element 2
+    - Dataset information 
 
   - Status element 2
     - Business requirements
@@ -69,34 +116,57 @@ To save time in this process, the IT team suggested an ML system that detects in
     - Display table showing uploaded images and ML model classifications
 
   - Button 2
-    - Generate table with image names and ML model classifications with option to download
+    - Generate table with image names and ML model classifications
+
+  - Button 3
+    - Download generated report table
 
 ### Page 4: Project Hypothesis and Validation
 
-- TODO: self-explanatory by page name
+- Status element 1
+  - Project hypothesis
+
+- Status element 2
+  - Validation steps
+
+- Status element 3
+  - Conclusion
 
 ### Page 5: ML Performance Metrics
 
-- TODO: descriptive performance metrics
+- Expander 1
+  - Dataset distribution
+
+- Expander 2
+  - Model summary
+
+- Expander 3
+  - Model fiting / training
+
+- Expander 4
+  - Model performance
 
 ## Unfixed Bugs
 
-- You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+- No known unfixed issues
 
 ## Deployment
 
 ### Heroku
 
-- The App live link is: `https://YOUR_APP_NAME.herokuapp.com/`
-- Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-- The project was deployed to Heroku using the following steps.
+- The App live link is: [Mildew Alert!](https://mildew-alert-5e353bb60aa4.herokuapp.com/)
 
-1. Log in to Heroku and create an App
-2. At the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button Open App on the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the .slugignore file.
+- The project was deployed to Heroku using the following steps:
+
+  1. Set the runtime.txt "Python version" to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version. For this project is is 3.12
+  2. Build minimum requirements.txt file required for deployment function without exceeding 500MB limit
+  3. Set Procfile and setup.sh file 
+  4. Log in to Heroku and create an App
+  5. At the Deploy tab, select GitHub as the deployment method.
+  6. Select your repository name and click Search. Once it is found, click Connect.
+  7. Select the branch you want to deploy, then click Deploy Branch.
+  8. On any errors inspect log and correct accordingly repeating required steps
+  9. Click on View App and test
 
 ## Main Data Analysis and Machine Learning Libraries
 
@@ -112,11 +182,6 @@ To save time in this process, the IT team suggested an ML system that detects in
 - The text for the Home page was taken from Wikipedia Article A.
 - Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
 
 ## Acknowledgements (optional)
 

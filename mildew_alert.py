@@ -13,7 +13,7 @@ mildew_alert = MultiPage(app_name="Project: Mildew Alert!")
 mildew_alert.add_page("Project summary", project_summary_page)
 mildew_alert.add_page("Data study", data_study_page)
 mildew_alert.add_page("Mildew alerter", mildew_alerter_page)
-mildew_alert.add_page("Hypothesis", hypothesis_page)
+mildew_alert.add_page("Hypothesis evaluation", hypothesis_page)
 mildew_alert.add_page("Technical information", technical_informatio_page)
 
 mildew_alert.run()
