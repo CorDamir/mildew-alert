@@ -2,6 +2,6 @@
 kaggle.json
 inputs/dataset/cherry-leaves/
 backup/
-outputs/
+outputs/dataset
 **/__pycache__/
 *.pyc
