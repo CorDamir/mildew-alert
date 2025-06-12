@@ -1,6 +1,7 @@
 .venv/
 kaggle.json
-inputs/dataset/cherry-leaves/
+inputs/dataset/cherry-leaves/train
+inputs/dataset/cherry-leaves/test
 backup/
 outputs/dataset
 **/__pycache__/

@@ -44,7 +44,8 @@ def technical_informatio_page():
         st.subheader("Performance tracking")
 
         st.image(images_dir + "/accuracy_plot.png", use_container_width=True)
-        st.image(images_dir + "/loss_function_plot.png", use_container_width=True)
+        st.image(images_dir + "/loss_function_plot.png",
+                 use_container_width=True)
 
     with st.expander("Model performance"):
         st.write(
