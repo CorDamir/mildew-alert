@@ -32,8 +32,6 @@ def data_study_page():
     images_dir = "./outputs/images"
 
     st.header("Data study")
-    st.divider()
-
     st.info(
         "Data study was done to satisfy business requirement 1"
         " - to visually distinguish healthy and mildewed leaves. "
