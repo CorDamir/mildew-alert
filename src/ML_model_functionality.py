@@ -6,6 +6,16 @@ import pandas as pd
 
 
 class MildewAlerter():
+    """
+    self.results[] contains image paths and text
+    interpretation of analysis if analysis was done
+
+    self.run_analysis() accepts list-like collection of
+    image paths, stores analysis in self.results[]
+
+    self.results_to_dataframe() returns pandas dataframe
+    with image names and respective analysis results
+    """
     def __init__(self, version):
         save_dir = os.getcwd() + "/outputs/model"
         self.best_model = load_model(
