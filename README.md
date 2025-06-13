@@ -255,7 +255,7 @@ To save time in this process, the IT team suggested an ML system that detects in
   - model loading in live version
 
 - ### Scikit-learn
-  - honorable mention, only used encoder to convert target categories to binary as part of pre-processing
+  - honorable mention, only used encoder to convert target categories to numerical values as part of pre-processing
 
 - ### NumPy
   - base data manipulation methods used by other libraries
