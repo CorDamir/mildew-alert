@@ -96,111 +96,120 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Dashboard Design
 
-<!-- PAGE 1 -->
-<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+<table>
 
-  <div style="flex: 1;">
-    <h3>Page 1: Project Summary</h3>
-    <ul>
-      <li><strong>Status element 1:</strong> General Information</li>
-      <li><strong>Status element 2:</strong> Dataset information</li>
-      <li><strong>Status element 2:</strong> Business requirements</li>
-      <li><strong>Status element 3:</strong> Link to more information</li>
-    </ul>
-  </div>
+  <!-- Page 1 -->
+  <tr>
+    <td valign="top" width="60%">
+      <strong>Page 1: Project Summary</strong>
+      <ul>
+        <li><strong>Status element 1:</strong> General Information</li>
+        <li><strong>Status element 2:</strong> Dataset information</li>
+        <li><strong>Status element 2:</strong> Business requirements</li>
+        <li><strong>Status element 3:</strong> Link to more information</li>
+      </ul>
+    </td>
+    <td>
+      <img src="./readme_img/page_1.png" alt="Page 1 Preview" width="100%"/>
+    </td>
+  </tr>
 
-  <div style="flex: 1; padding-left: 20px;">
-    <img src="./readme_img/page_1.png" alt="Page 1 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
-  </div>
+  <!-- Page 2 -->
+  <tr>
+    <td valign="top">
+      <strong>Page 2: Cherry Leaf Visualizer</strong>
+      <ul>
+        <li><strong>Expander 1:</strong> Average and variability images</li>
+        <li><strong>Expander 2:</strong> Differences between healthy and infected images</li>
+        <li><strong>Expander 3:</strong> Image montage</li>
+      </ul>
+    </td>
+    <td>
+      <img src="./readme_img/page_2.png" alt="Page 2 Preview" width="100%"/>
+    </td>
+  </tr>
 
-</div>
+  <!-- Page 3 -->
+  <tr>
+    <td valign="top">
+      <strong>Page 3: Powdery Mildew Classifier</strong>
+      <ul>
+        <li><strong>Status element:</strong> Usage description</li>
+        <li><strong>File uploader:</strong> Allow multiple image upload</li>
+        <li><strong>Button 1:</strong> Run classifier and display results</li>
+        <li><strong>Button 2:</strong> Generate classification table</li>
+        <li><strong>Button 3:</strong> Download report table</li>
+      </ul>
+    </td>
+    <td>
+      <img src="./readme_img/page_3.png" alt="Page 3 Preview" width="100%"/>
+    </td>
+  </tr>
 
-<!-- PAGE 2 -->
-<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
+  <!-- Page 4 -->
+  <tr>
+    <td valign="top">
+      <strong>Page 4: Project Hypothesis and Validation</strong>
+      <ul>
+        <li><strong>Status element 1:</strong> Project hypothesis</li>
+        <li><strong>Status element 2:</strong> Validation steps</li>
+        <li><strong>Status element 3:</strong> Conclusion</li>
+      </ul>
+    </td>
+    <td>
+      <img src="./readme_img/page_4.png" alt="Page 4 Preview" width="100%"/>
+    </td>
+  </tr>
 
-  <div style="flex: 1;">
-    <h3>Page 2: Cherry Leaf Visualizer</h3>
-    <ul>
-      <li><strong>Expander 1:</strong> Average and variability images</li>
-      <li><strong>Expander 2:</strong> Differences between healthy and infected images</li>
-      <li><strong>Expander 3:</strong> Image montage</li>
-    </ul>
-  </div>
+  <!-- Page 5 -->
+  <tr>
+    <td valign="top">
+      <strong>Page 5: ML Performance Metrics</strong>
+      <ul>
+        <li><strong>Expander 1:</strong> Dataset distribution</li>
+        <li><strong>Expander 2:</strong> Model summary</li>
+        <li><strong>Expander 3:</strong> Model training</li>
+        <li><strong>Expander 4:</strong> Model performance</li>
+      </ul>
+    </td>
+    <td>
+      <img src="./readme_img/page_5.png" alt="Page 5 Preview" width="100%"/>
+    </td>
+  </tr>
 
-  <div style="flex: 1; padding-left: 20px;">
-    <img src="./readme_img/page_2.png" alt="Page 2 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
-  </div>
+</table>
 
-</div>
-
-<!-- PAGE 3 -->
-<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
-
-  <div style="flex: 1;">
-    <h3>Page 3: Powdery Mildew Classifier</h3>
-    <ul>
-      <li><strong>Status element:</strong> Usage description</li>
-      <li><strong>File uploader:</strong> Allow multiple image upload</li>
-      <li><strong>Button 1:</strong> Run classifier and display results</li>
-      <li><strong>Button 2:</strong> Generate classification table</li>
-      <li><strong>Button 3:</strong> Download report table</li>
-    </ul>
-  </div>
-
-  <div style="flex: 1; padding-left: 20px;">
-    <img src="./readme_img/page_3.png" alt="Page 3 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
-  </div>
-
-</div>
-
-<!-- PAGE 4 -->
-<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
-
-  <div style="flex: 1;">
-    <h3>Page 4: Project Hypothesis and Validation</h3>
-    <ul>
-      <li><strong>Status element 1:</strong> Project hypothesis</li>
-      <li><strong>Status element 2:</strong> Validation steps</li>
-      <li><strong>Status element 3:</strong> Conclusion</li>
-    </ul>
-  </div>
-
-  <div style="flex: 1; padding-left: 20px;">
-    <img src="./readme_img/page_4.png" alt="Page 4 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
-  </div>
-
-</div>
-
-<!-- PAGE 5 -->
-<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
-
-  <div style="flex: 1;">
-    <h3>Page 5: ML Performance Metrics</h3>
-    <ul>
-      <li><strong>Expander 1:</strong> Dataset distribution</li>
-      <li><strong>Expander 2:</strong> Model summary</li>
-      <li><strong>Expander 3:</strong> Model training</li>
-      <li><strong>Expander 4:</strong> Model performance</li>
-    </ul>
-  </div>
-
-  <div style="flex: 1; padding-left: 20px;">
-    <img src="./readme_img/page_5.png" alt="Page 5 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
-  </div>
-
-</div>
-
-<br>
 
 ## Testing information
 
-
+| **Test**                                         | **Result**                                                                            |
+| ------------------------------------------------ | ------------------------------------------------------------------------------------- |
+| Click on sidemenu button                         | Sidemenu toggles (shows/hides)                                                        |
+| Click on a menu item                             | Corresponding page opens                                                              |
+| Click on “Readme” link on summary page           | README opens in a new tab                                                             |
+| Click on an expander                             | Corresponding section expands                                                         |
+| Click on radio buttons in image montages         | Relevant montage appears                                                              |
+| Click on refresh button before rendering montage | No action (intended behavior)                                                         |
+| Click “Download Cherry Leaves Sample Dataset”    | Zip file is downloaded                                                                |
+| Upload `.jpg` file                               | Upload successful                                                                     |
+| Upload `.jpeg` file                              | Upload successful                                                                     |
+| Upload `.png` file                               | Upload successful                                                                     |
+| Upload `.mp4` file                               | Error message displayed: file type not allowed                                        |
+| Attempt analysis with `.mp4` file                | Analysis is disabled                                                                  |
+| Upload 100 cherry leaf images                    | Upload successful                                                                     |
+| Analyze 100 cherry leaf images                   | Analysis successful (under 5 seconds)                                                 |
+| Inspect results output                           | Output matches expectations                                                           |
+| Click “Generate Report Table”                    | Report is generated; download button appears                                          |
+| Click download button                            | Correct CSV is downloaded; button becomes disabled                                    |
+| Modify uploaded files (add/remove)               | Old analysis is cleared; analysis button enabled; table and download buttons disabled |
+| Upload random (non-leaf) images                  | Analysis proceeds; results are nonsensical                                            |
+| Remove all files from uploader                   | All buttons are disabled                                                              |
 
 <br>
 
 ## Unfixed Bugs
 
-- No known unfixed issues
+- Users can upload any image and model will confidently classify it into one of our classes. It is up to users to only upload cherry leaf images
 
 <br>
 
@@ -265,6 +274,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 - base idea of convolution neural network design is from [tensorflow tutorial](https://www.tensorflow.org/tutorials/images/cnn)
 - idea and code for Streamlit multi-page functionality copied from Code Institute's walkthrough project, noted by code comment
 - [ChatGPT](https://chatgpt.com/) generated "what is powdery mildew" section on project summary page and html code for "dashboard design" section of this file
+- possibly arrogantly crediting myself for putting in effort and writing all rest of code and information without using help even when it was much slower, all for learning purposes
 
 
 <br>
