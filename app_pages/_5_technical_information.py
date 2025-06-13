@@ -33,7 +33,16 @@ def technical_informatio_page():
         )
         st.image(images_dir + "/model_summary.png", use_container_width=True)
         st.write(
-            "describing here"
+            "* Starting point was based on logic from TensorFlow tutorial on "
+            " simple convolutional networks - convolution layer followed by"
+            " pooling layer, and then flatten layer before a dense layer.\n"
+            "* Model retained this basic structure and evolved by additions"
+            " of convolution + pooling layers." "Having two dense layers with"
+            " dropout of 30-40% showed good results immediately. I've learned"
+            " that the best approach was to get key features by using less"
+            " filters and then increase detail of learning in next layers.\n"
+            "* This is reflected in a growing number of filters in convolution"
+            " layers (32 - 64 - 128) and then dense layers having 256 nodes."
         )
 
     with st.expander("Model fitting / training"):
@@ -51,10 +60,10 @@ def technical_informatio_page():
                  use_container_width=True)
 
         st.write(
-            "Machine learning process quickly identified key features and reached"
-            "optimal performance for it's design on 5th epoch. Afterwards more"
-            "iterations led to overfitting so having an early stop function was"
-            "critical"
+            "Machine learning process quickly identified key features and"
+            " reached optimal performance for it's design on 5th epoch."
+            " Afterwards more iterations led to drop in performance"
+            " so having an early stop function was critical"
         )
 
     with st.expander("Model performance"):

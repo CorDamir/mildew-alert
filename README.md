@@ -1,6 +1,9 @@
 # MILDEW ALERT!
 
-Mildew Alert! is a project that combines
+![mockup](/readme_img/mockup.jpg)
+
+Mildew Alert! is a project that combines data science, machine learning engineering and software development. From collecting and processing cherry leaf image data, to making and training a machine learning model and finally deploying it through a user-friendly Streamlit app, it demonstrates a full pipeline, an end-to-end workflow of turning raw data into an interactive, usable product. You can upload many cherry leaf images and quickly receive information if they contain powdery mildew or not on [live version](https://mildew-alert-5e353bb60aa4.herokuapp.com/).
+
 
 ## Dataset Content
 
@@ -64,7 +67,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 - Client is imaginary and data publicly hosted, no concerns
 
 ### 7. Does the data suggest a particular model?
--The data suggests a binary classifier, indicating whether a particular cherry leaf is healthy or contains powdery mildew.
+- The data suggests a binary classifier, indicating whether a particular cherry leaf is healthy or contains powdery mildew.
 
 ### 8. What are the model's inputs and intended outputs?
 - The input is a cherry leaf image and the output is a prediction of whether the cherry leaf is healthy or contains powdery mildew.
@@ -78,73 +81,99 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Dashboard Design
 
-### Page 1: Project summary
+<!-- PAGE 1 -->
+<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
 
-  - Status element 1
-    - General Information
+  <div style="flex: 1;">
+    <h3>Page 1: Project Summary</h3>
+    <ul>
+      <li><strong>Status element 1:</strong> General Information</li>
+      <li><strong>Status element 2:</strong> Dataset information</li>
+      <li><strong>Status element 2:</strong> Business requirements</li>
+      <li><strong>Status element 3:</strong> Link to more information</li>
+    </ul>
+  </div>
 
-  - Status element 2
-    - Dataset information 
+  <div style="flex: 1; padding-left: 20px;">
+    <img src="./readme_img/page_1.png" alt="Page 1 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+  </div>
 
-  - Status element 2
-    - Business requirements
+</div>
 
-  - Status element 3
-    - Link to more information
+<!-- PAGE 2 -->
+<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
 
-### Page 2: Cherry leaf visualizer
+  <div style="flex: 1;">
+    <h3>Page 2: Cherry Leaf Visualizer</h3>
+    <ul>
+      <li><strong>Expander 1:</strong> Average and variability images</li>
+      <li><strong>Expander 2:</strong> Differences between healthy and infected images</li>
+      <li><strong>Expander 3:</strong> Image montage</li>
+    </ul>
+  </div>
 
-  - Expander 1 
-    - Average and variability images
+  <div style="flex: 1; padding-left: 20px;">
+    <img src="./readme_img/page_2.png" alt="Page 2 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+  </div>
 
-  - Expander 2 
-    - Differences between healthy and infected average images
+</div>
 
-  - Expander 3 
-    - Image montage
+<!-- PAGE 3 -->
+<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
 
-### Page 3: Powdery mildew classifier
+  <div style="flex: 1;">
+    <h3>Page 3: Powdery Mildew Classifier</h3>
+    <ul>
+      <li><strong>Status element:</strong> Usage description</li>
+      <li><strong>File uploader:</strong> Allow multiple image upload</li>
+      <li><strong>Button 1:</strong> Run classifier and display results</li>
+      <li><strong>Button 2:</strong> Generate classification table</li>
+      <li><strong>Button 3:</strong> Download report table</li>
+    </ul>
+  </div>
 
-  - Status element
-    - Usage description
+  <div style="flex: 1; padding-left: 20px;">
+    <img src="./readme_img/page_3.png" alt="Page 3 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+  </div>
 
-  - File uploader
-    - Allow multiple image upload
+</div>
 
-  - Button 1
-    - Run ML classifier model on uploaded images and display results
-    - Display table showing uploaded images and ML model classifications
+<!-- PAGE 4 -->
+<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
 
-  - Button 2
-    - Generate table with image names and ML model classifications
+  <div style="flex: 1;">
+    <h3>Page 4: Project Hypothesis and Validation</h3>
+    <ul>
+      <li><strong>Status element 1:</strong> Project hypothesis</li>
+      <li><strong>Status element 2:</strong> Validation steps</li>
+      <li><strong>Status element 3:</strong> Conclusion</li>
+    </ul>
+  </div>
 
-  - Button 3
-    - Download generated report table
+  <div style="flex: 1; padding-left: 20px;">
+    <img src="./readme_img/page_4.png" alt="Page 4 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+  </div>
 
-### Page 4: Project Hypothesis and Validation
+</div>
 
-- Status element 1
-  - Project hypothesis
+<!-- PAGE 5 -->
+<div style="display: flex; align-items: flex-start; margin-bottom: 40px;">
 
-- Status element 2
-  - Validation steps
+  <div style="flex: 1;">
+    <h3>Page 5: ML Performance Metrics</h3>
+    <ul>
+      <li><strong>Expander 1:</strong> Dataset distribution</li>
+      <li><strong>Expander 2:</strong> Model summary</li>
+      <li><strong>Expander 3:</strong> Model training</li>
+      <li><strong>Expander 4:</strong> Model performance</li>
+    </ul>
+  </div>
 
-- Status element 3
-  - Conclusion
+  <div style="flex: 1; padding-left: 20px;">
+    <img src="./readme_img/page_5.png" alt="Page 5 Preview" style="max-width: 400px; width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px;">
+  </div>
 
-### Page 5: ML Performance Metrics
-
-- Expander 1
-  - Dataset distribution
-
-- Expander 2
-  - Model summary
-
-- Expander 3
-  - Model fiting / training
-
-- Expander 4
-  - Model performance
+</div>
 
 ## Unfixed Bugs
 
